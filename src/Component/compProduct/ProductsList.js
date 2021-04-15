@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const CompProduct = () => {
+const ProductsList = () => {
     const [products, setProducts] = useState([])
     
     useEffect(() => {
@@ -13,7 +13,7 @@ const CompProduct = () => {
         }).catch((err) => {
             console.log(err)
         })
-    }, [])
+    },[])
     
     return (
         <div>
@@ -27,7 +27,7 @@ const CompProduct = () => {
     )
 }
 
-export default CompProduct;
+export default ProductsList;
 
 
 

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-const CompCategory = () => {
+const CategoriesList = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -27,6 +27,6 @@ const CompCategory = () => {
     )
 }
 
-export default CompCategory;
+export default CategoriesList;
 
 

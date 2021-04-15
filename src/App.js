@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import CompCategory from './Component/compCategory/compCategory.js'
-import CompProduct from './Component/compProduct/compProduct.js'
+import CategoriesList from './Component/compCategory/CategoriesList.js'
+import SingleCategory from './Component/compCategory/SingleCategory'
+import ProductsList from './Component/compProduct/ProductsList.js'
+import SingleProduct from './Component/compProduct/SingleProduct.js'
 
 // export default class App extends Component {
 //   constructor(){
@@ -41,9 +43,13 @@ import CompProduct from './Component/compProduct/compProduct.js'
 const App = () => {
   return (
     <div>
-      <h3><CompCategory/></h3>
+      <p><CategoriesList/></p>
       <br/>
-      <h3><CompProduct/></h3>
+      <p><SingleCategory/></p>
+      <br/>
+      <p><ProductsList/></p>
+      <br/>
+      <p><SingleProduct/></p>
     </div>
   )
 }
