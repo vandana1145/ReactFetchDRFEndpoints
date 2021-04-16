@@ -5,6 +5,8 @@ import ProductsList from './Component/compProduct/ProductsList.js'
 import SingleProduct from './Component/compProduct/SingleProduct.js'
 import SingleUser from './Component/compUser/SingleUser.js'
 import UserList from './Component/compUser/UserList.js'
+import CartList from './Component/compCart/CartList.js'
+import SingleCart from './Component/compCart/SingleCart'
 
 // export default class App extends Component {
 //   constructor(){
@@ -56,6 +58,10 @@ const App = () => {
       <UserList/>
       <br/>
       <SingleUser/>
+      <br/>
+      <CartList/>
+      <br/>
+      <SingleCart/>
     </div>
   )
 }
