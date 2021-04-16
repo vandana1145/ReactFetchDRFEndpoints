@@ -34,4 +34,4 @@ function SingleCategory() {
     )
 } 
 
-export default SingleCategory
+export default SingleCategory;

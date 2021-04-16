@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import CategoriesList from './Component/compCategory/CategoriesList.js'
 import SingleCategory from './Component/compCategory/SingleCategory'
 import ProductsList from './Component/compProduct/ProductsList.js'
 import SingleProduct from './Component/compProduct/SingleProduct.js'
+import SingleUser from './Component/compUser/SingleUser.js'
+import UserList from './Component/compUser/UserList.js'
 
 // export default class App extends Component {
 //   constructor(){
@@ -43,13 +45,17 @@ import SingleProduct from './Component/compProduct/SingleProduct.js'
 const App = () => {
   return (
     <div>
-      <p><CategoriesList/></p>
+      <CategoriesList/>
       <br/>
-      <p><SingleCategory/></p>
+      <SingleCategory/>
       <br/>
-      <p><ProductsList/></p>
+      <ProductsList/>
       <br/>
-      <p><SingleProduct/></p>
+      <SingleProduct/>
+      <br/>
+      <UserList/>
+      <br/>
+      <SingleUser/>
     </div>
   )
 }

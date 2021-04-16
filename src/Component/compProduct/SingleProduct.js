@@ -12,7 +12,7 @@ function SingleProduct() {
 
     useEffect(() => {
         axios
-        .get(`http://127.0.0.1:8000/api/product/${pk}`)
+        .get(`http://127.0.0.1:8000/api/product/${productPkFromButtonClick}`)
         .then(response => {
             console.log(response)
             setProduct(response.data)
@@ -20,7 +20,7 @@ function SingleProduct() {
         .catch((err) => {
             console.log(err)
         })
-    }, [productPkFromButtonClick])
+    },[productPkFromButtonClick])
 
     return (
         <>
@@ -36,4 +36,4 @@ function SingleProduct() {
     )
 } 
 
-export default SingleProduct
+export default SingleProduct;
