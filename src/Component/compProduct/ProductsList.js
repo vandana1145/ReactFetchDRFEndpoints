@@ -20,7 +20,7 @@ const ProductsList = () => {
             <h1>List of Products:</h1>
             <ul>
                 {products.map(product =>
-                    <li key={product.id}>{product.product}</li>
+                    <li key={product.id}>Item: {product.product} <br/> Price: {product.price} Euros<br/><br/></li>
                 )}
             </ul>
         </div>

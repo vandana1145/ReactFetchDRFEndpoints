@@ -47,7 +47,7 @@ import CartItems from './Component/compCartItem/CartItems.js'
 
 const App = () => {
   return (
-    <div>
+    <>
       <CategoriesList/>
       <br/>
       <SingleCategory/>
@@ -65,7 +65,7 @@ const App = () => {
       <SingleCart/>
       <br/>
       <CartItems/>
-    </div>
+    </>
   )
 }
 
