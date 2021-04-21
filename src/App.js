@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import CategoriesList from './Component/compCategory/CategoriesList.js'
 import SingleCategory from './Component/compCategory/SingleCategory'
 import ProductsList from './Component/compProduct/ProductsList.js'
@@ -8,6 +9,7 @@ import UserList from './Component/compUser/UserList.js'
 import CartList from './Component/compCart/CartList.js'
 import SingleCart from './Component/compCart/SingleCart'
 import CartItems from './Component/compCartItem/CartItems.js'
+import InvalidPath from './Component/notFound/NotFound.js'
 
 // export default class App extends Component {
 //   constructor(){
@@ -48,23 +50,32 @@ import CartItems from './Component/compCartItem/CartItems.js'
 const App = () => {
   return (
     <>
-      <CategoriesList/>
-      <br/>
-      <SingleCategory/>
-      <br/>
-      <ProductsList/>
-      <br/>
-      <SingleProduct/>
-      <br/>
-      <UserList/>
-      <br/>
-      <SingleUser/>
-      <br/>
-      <CartList/>
-      <br/>
-      <SingleCart/>
-      <br/>
-      <CartItems/>
+      <nav>
+        <h2>Welcome</h2>
+        <ul>
+          <li><Link to="/">CategoriesList</Link></li>
+          <li><NavLink to="/category" activeClassName="active">SingleCategory</NavLink></li>
+          <li><NavLink to="/productslist" activeClassName="active">ProductsList</NavLink></li>
+          <li><NavLink to="/product" activeClassName="active">SingleProduct</NavLink></li>
+          <li><NavLink to="/userslist" activeClassName="active">UserList</NavLink></li>
+          <li><NavLink to="/user" activeClassName="active">SingleUser</NavLink></li>
+          <li><NavLink to="/cartlist" activeClassName="active">CartList</NavLink></li>
+          <li><NavLink to="/cart" activeClassName="active">SingleCart</NavLink></li>
+          <li><NavLink to="/cartitems" activeClassName="active">CartItems</NavLink></li>
+        </ul>
+        <Switch>
+          <Route exact path="/" component={CategoriesList}></Route>
+          <Route path="/category" component={SingleCategory}></Route>
+          <Route path="/productslist" component={ProductsList}></Route>
+          <Route path="/product" component={SingleProduct}></Route>
+          <Route path="/userslist" component={UserList}></Route>
+          <Route path="/user" component={SingleUser}></Route>
+          <Route path="/cartlist" component={CartList}></Route>
+          <Route path="/cart" component={SingleCart}></Route>
+          <Route path="/cartitems" component={CartItems}></Route>
+          <Route component={InvalidPath}></Route>
+        </Switch>
+      </nav>
     </>
   )
 }

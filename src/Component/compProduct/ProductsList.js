@@ -17,12 +17,27 @@ const ProductsList = () => {
     
     return (
         <div>
-            <h1>List of Products:</h1>
-            <ul>
-                {products.map(product =>
-                    <li key={product.id}>Item: {product.product} <br/> Price: {product.price} Euros<br/><br/></li>
-                )}
-            </ul>
+            <h2>List of Products:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Price (in Euros)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {products.map(product => (
+                        <tr key={product.id}>
+                            <td>{product.id}</td>
+                            <td>{product.product}</td>
+                            <td>{product.description}</td>
+                            <td>{product.price}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import Item from './Item'
 
 function CartItems() {
     const [cartItems, setCartItems] = useState([])
@@ -18,7 +17,24 @@ function CartItems() {
     return (
         <div>
           <h3>List of carts with items:</h3> 
-            {cartItems.map(item => <Item item={item}></Item>)}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cart no.</th>
+                        <th>Product Id</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {cartItems.map(item => (
+                        <tr key={item.id}>
+                            <td>{item.cart}</td>
+                            <td>{item.product}</td>
+                            <td>{item.quantity}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }

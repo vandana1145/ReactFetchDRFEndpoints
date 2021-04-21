@@ -18,11 +18,22 @@ function CartList() {
     return (
         <div>
             <h1>List of carts:</h1>
-            <ul>
-                {cartList.map(cart => 
-                    <li key={cart.id}>{`User: ${cart.user}`} {`Created on: ${cart.created_at}`}</li>
-                )}
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Created On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {cartList.map(cart => (
+                        <tr key={cart.id}>
+                            <td>{cart.user}</td>
+                            <td>{cart.created_at}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }

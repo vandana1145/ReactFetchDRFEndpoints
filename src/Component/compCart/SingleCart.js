@@ -11,16 +11,20 @@ function SingleCart() {
     }
 
     useEffect(() => {
-        axios
+        const getApi = async () => {
+        const response = await axios
         .get(`http://127.0.0.1:8000/api/cart/${cartPkFromButtonClick}/cartitems/`)
-        .then((response) => {
-            console.log(response)
-            setCart(response.data)
-        }).catch((err) => {
-            console.log(err)
-        })
+        setCart(response.data)
+        // .then((response) => {
+        //     console.log(response)
+        //     setCart(response.data)
+        // }).catch((err) => {
+        //     console.log(err)
+        // })
+    }
+    getApi();
     }, [cartPkFromButtonClick])
-
+    
     return (
         <div>
             Enter the cart Id:
